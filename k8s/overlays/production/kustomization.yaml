@@ -8,7 +8,10 @@ patches:
     patch: |-
       - op: replace
         path: /spec/replicas
-        value: 5
+        value: 2                # <--- Mettiamo 2 per ora
+      - op: replace
+        path: /spec/template/spec/containers/0/ports/0/containerPort
+        value: 5000             # <--- FORZIAMO la porta 5000 anche qui!
 
 commonLabels:
   env: production
