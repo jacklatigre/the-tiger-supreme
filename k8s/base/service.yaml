@@ -7,6 +7,6 @@ spec:
     app: tiger-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: ClusterIP
+      port: 80         # La porta che scriverai nel browser
+      targetPort: 5000  # La porta dove risponde Flask dentro il pod
+  type: NodePort       # Cambialo in NodePort per vederlo dall'esterno della VM
